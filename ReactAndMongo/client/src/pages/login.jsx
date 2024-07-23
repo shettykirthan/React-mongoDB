@@ -12,6 +12,7 @@ const Login = () => {
         .then(result => {
             console.log(result);
             if(result.data === "Success"){
+                localStorage.setItem("user", email);
                 navigate('./home')
             }
         })
